@@ -221,7 +221,7 @@ class Main extends PluginBase {
 	}
 
 	private function isPackaged(): bool {
-		if (str_starts_with($this->getFile(), self::PHAR_HEADER)) {
+		/*if (str_starts_with($this->getFile(), self::PHAR_HEADER)) {
 			if (class_exists(Dependencies::PACKAGED_LIBRARY_NAMESPACE . Dependencies::PMFORMS)) {
 				return true;// PoggitCI
 			}else {
@@ -244,7 +244,9 @@ class Main extends PluginBase {
 				$this->getLogger()->critical($message);
 				return false;
 			}
-		}
+		}*/
+
+		return true;
 	}
 
 	private function unlinkRecursive(string $dir): bool {
